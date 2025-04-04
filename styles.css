@@ -1,0 +1,426 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    overflow: hidden;
+}
+
+#hero h1, #hero p {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+#hero h1 {
+    position: relative;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    z-index: 1;
+}
+
+#hero h1::after {
+    content: 'Collins Joshua';
+    position: absolute;
+    top: 5px; /* Adjust to position the shadow text */
+    left: 5px; /* Adjust to position the shadow text */
+    color: rgba(255, 255, 255, 0.1); /* Faded text for the shadow effect */
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: -1;
+    text-transform: uppercase;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* CV Link on Hero Section */
+#cv-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #0077ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 0 10px #0077ff;
+}
+
+/* Ensure the link is styled properly */
+#cv-link {
+    display: inline-block; /* Ensure it is displayed */
+    color: #007bff; /* Set a visible color */
+    text-decoration: underline; /* Add underline for visibility */
+    font-weight: bold; /* Make it stand out */
+}
+
+#cv-link:hover {
+    background: #005bb5;
+    box-shadow: 0 0 15px #005bb5;
+}
+
+#cv-link:hover {
+    color: #0056b3; /* Change color on hover for better UX */
+    text-decoration: none; /* Optional: Remove underline on hover */
+}
+
+/* Skills Section */
+#skills-tree {
+    width: 100%;
+    height: 500px;
+    background: #e0e0e0;
+    display: flex;
+    justify-content: flex-end; /* Align content to the far right */
+    align-items: center;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Skills Graph */
+#skills-graph {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* About Section */
+#about {
+    background: linear-gradient(135deg, #0077ff, #00ffff);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#about h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+#about-container p {
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 10px 0;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Education Section */
+#education {
+    background: #0a0a23;
+    color: #00ffff;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+#education-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#education-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #00ffff;
+    box-shadow: 0 0 15px #00ffff;
+}
+
+#education-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#education-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #00ffff;
+    width: auto; /* Allow full text width */
+    animation: blink 0.5s step-end infinite alternate; /* Remove typing animation width restriction */
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: auto;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-right-color: #00ffff;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+#education ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#education li {
+    margin: 10px 0;
+}
+
+/* Projects Section */
+#projects {
+    background: #0a0a23;
+    color: #00ffff;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+#projects h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 80%;
+    border: 2px solid #00ffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px #00ffff;
+    background: #0f0f3a;
+}
+
+.project img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 10px #00ffff;
+}
+
+.project p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+    margin: 0;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #0077ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 0 10px #0077ff;
+}
+
+.project a:hover {
+    background: #005bb5;
+    box-shadow: 0 0 15px #005bb5;
+}
+
+/* Contact Section */
+#contact {
+    background: #f9f9f9;
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    color: #0077ff;
+}
+
+#contact-screen {
+    width: 400px;
+    height: 250px;
+    background: #333;
+    border: 5px solid #00ffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ffff;
+    overflow: hidden;
+    position: relative;
+}
+
+#contact-screen::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 20px;
+    background: #00ffff;
+    border-radius: 5px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#contact-form label {
+    font-weight: bold;
+    text-align: left;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+#contact-form button {
+    background: #0077ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 0 10px #0077ff;
+}
+
+#contact-form button:hover {
+    background: #005bb5;
+    box-shadow: 0 0 15px #005bb5;
+}
+
+/* Navigation Bar */
+#navbar {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#navbar li {
+    display: inline;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+#footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #0077ff;
+}
+
+#footer-content {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+#footer-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#footer-content li {
+    margin: 5px 0;
+}
+
+#footer-content a {
+    color: #0077ff;
+    text-decoration: none;
+}
+
+#footer-content a:hover {
+    text-decoration: underline;
+}
